@@ -12,7 +12,7 @@ let seat = document.querySelectorAll(".row .seat")
 /* refresh // update */
 let currentMovieIndex= localStorage.getItem("filmIndex") ? localStorage.getItem("filmIndex") : movie.selectedIndex;
 movie.selectedIndex=currentMovieIndex
-film.innerText = localStorage.getItem("filmName") ? localStorage.getItem("filmName") : movieSelect[0].innerText.slice(0, movieSelect[0].innerText.indexOf("("));
+film.innerText = localStorage.getItem("filmName") ?  JSON.parse(localStorage.getItem("filmName")) : movieSelect[0].innerText.slice(0, movieSelect[0].innerText.indexOf("("));
 count.innerText = localStorage.getItem("seat") ? JSON.parse(localStorage.getItem("seat")).length :count.innerText;
 total.innerText = movieSelect[0].value * count.innerText
 let storageLocal =localStorage.getItem("seat") ? JSON.parse(localStorage.getItem("seat")) : [];
